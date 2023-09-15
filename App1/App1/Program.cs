@@ -9,7 +9,7 @@ namespace App1
             Random randomNumber = new Random();
             int firstNumber = randomNumber.Next(-100, 100), secondNumber = randomNumber.Next(-100, 100);
             
-            Console.WriteLine("(" + firstNumber + " * " + secondNumber + ")^2 = " + ToSquare(firstNumber, secondNumber));
+            Console.WriteLine("(" + firstNumber + " * " + secondNumber + ")^2 = " + Pow2Ints(firstNumber, secondNumber));
         }
 
         /// <summary>
@@ -18,9 +18,9 @@ namespace App1
         /// <param name="firstNumber">Первое целое число</param>
         /// <param name="secondNumber">Второе целое число</param>
         /// <returns>Возведенное в квадрат произведение двух целых чисел</returns>
-        static int ToSquare(int firstNumber, int secondNumber)
+        static int Pow2Ints(int firstNumber, int secondNumber)
         {
-            return (firstNumber * secondNumber) * (firstNumber * secondNumber);
+            return (int)Math.Pow(firstNumber * secondNumber, 2);
         }
     }
 }
